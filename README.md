@@ -37,11 +37,6 @@ The model is trained on a small, synthetic parallel corpus of English and Spanis
 *   **Data Preprocessing:** Tokenization, sequence padding, and one-hot encoding of target sequences.
 *   **Regularization:** `Dropout` layers and `L2` regularization applied to LSTM and Dense layers to combat overfitting.
 *   **Early Stopping:** Utilized `EarlyStopping` callback to monitor validation loss and prevent prolonged training on overfit models.
-*   **Inference Model:** Separate encoder and decoder inference models are constructed for sequence generation at test time, where the decoder generates one token at a time.
-
-## Observations
-
-With the current small dataset, the model exhibits significant overfitting and struggles to generalize. The inference results show repetitive outputs (`'es es es'`), indicating that the model defaults to frequently observed tokens due to insufficient data for learning complex linguistic patterns. To achieve a functional translation model, a substantially larger and more diverse dataset would be required.
 
 ## Setup and Usage
 
